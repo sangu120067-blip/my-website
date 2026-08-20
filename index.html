@@ -1,0 +1,1506 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SANGAMESH COLLAGE OF MEDICALE AND RESEARCH CENTER</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f5f9fc;
+            color: #222;
+        }
+
+        header {
+            background-color: #0b6e8e;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background-color: white;
+            color: #0b6e8e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+        }
+
+        .logo p {
+            font-size: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #b9f1ff;
+        }
+
+        .hero {
+            min-height: 550px;
+            background: linear-gradient(
+                rgba(5, 55, 75, 0.85),
+                rgba(5, 55, 75, 0.85)
+            );
+
+            display: flex;
+            align-items: center;
+            padding: 60px 7%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 span {
+            color: #80e6f5;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: #0b6e8e;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 7%;
+            background-color: white;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 25px;
+            background-color: #f0f9fc;
+            border-radius: 10px;
+        }
+
+        .stat-card h3 {
+            color: #0b6e8e;
+            font-size: 30px;
+        }
+
+        section {
+            padding: 70px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #084c61;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-box h3 {
+            color: #0b6e8e;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background-color: #eef9fc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .services {
+            background-color: #eef8fb;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #0b6e8e;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .doctor-search {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .doctor-search input {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .doctor-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .doctor-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: auto;
+            background-color: #dff5fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .doctor-card h3 {
+            color: #084c61;
+            margin-bottom: 7px;
+        }
+
+        .speciality {
+            color: #0b8aa8;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .doctor-card p {
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .available {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background-color: #d9f7df;
+            color: #16823b;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .department-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .department {
+            background-color: white;
+            border-left: 5px solid #0b6e8e;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .department h3 {
+            color: #084c61;
+            margin-bottom: 10px;
+        }
+
+        .department p {
+            color: #666;
+        }
+
+        .appointment {
+            background-color: #0b6e8e;
+            color: white;
+        }
+
+        .appointment-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .appointment .section-title h2 {
+            color: white;
+        }
+
+        .appointment .section-title p {
+            color: #dff7fb;
+        }
+
+        .appointment-form {
+            background-color: white;
+            padding: 35px;
+            border-radius: 15px;
+            color: #222;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            background-color: #0b6e8e;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .contact-card h3 {
+            color: #0b6e8e;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .emergency {
+            background-color: #fff0f0;
+            border-left: 5px solid #d62828;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 7px;
+        }
+
+        .emergency strong {
+            color: #c62828;
+        }
+
+        footer {
+            background-color: #063c4d;
+            color: white;
+            padding: 40px 7%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p,
+        footer a {
+            color: #c7e1e7;
+            line-height: 1.7;
+        }
+
+        footer a {
+            display: block;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .doctor-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .department-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            nav a {
+                margin-left: 5px;
+                font-size: 12px;
+            }
+
+            .hero h2 {
+                font-size: 35px;
+            }
+
+            .stats,
+            .service-grid,
+            .doctor-grid,
+            .department-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                +
+            </div>
+
+            <div>
+                <h1>Sangamesh Medical Center</h1>
+                <p>Ilkal</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointment">Appointment</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h2>
+                Quality Healthcare
+                <br>
+                <span>Closer to You</span>
+            </h2>
+
+            <p>
+                Welcome to Sangamesh College of Medical and Research Center,
+                Ilkal. We provide quality healthcare services with experienced
+                medical professionals and modern facilities.
+            </p>
+
+            <a href="#appointment" class="btn btn-primary">
+                Book Appointment
+            </a>
+
+            <a href="#doctors" class="btn btn-secondary">
+                View Doctors
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>24/7</h3>
+            <p>Emergency Care</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>15+</h3>
+            <p>Medical Departments</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>25+</h3>
+            <p>Medical Professionals</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>1000+</h3>
+            <p>Patients Served</p>
+        </div>
+
+    </div>
+
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>About Our Hospital</h2>
+
+            <p>
+                Healthcare with compassion, technology and expertise
+            </p>
+
+        </div>
+
+        <div class="about">
+
+            <div class="about-box">
+
+                <h3>
+                    Sangamesh College of Medical and Research Center
+                </h3>
+
+                <p>
+                    Sangamesh College of Medical and Research Center,
+                    Ilkal is a healthcare and medical education center
+                    providing a range of healthcare services.
+                </p>
+
+                <br>
+
+                <p>
+                    Patients can find information about doctors,
+                    departments, healthcare services and appointment
+                    requests through this website.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>Why Choose Us?</h3>
+
+                <div class="features">
+
+                    <div class="feature">
+                        🩺 Experienced Doctors
+                    </div>
+
+                    <div class="feature">
+                        🏥 Modern Facilities
+                    </div>
+
+                    <div class="feature">
+                        🚑 Emergency Services
+                    </div>
+
+                    <div class="feature">
+                        💙 Patient-Centered Care
+                    </div>
+
+                    <div class="feature">
+                        🧪 Diagnostic Services
+                    </div>
+
+                    <div class="feature">
+                        👨‍⚕️ Specialist Doctors
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>Our Healthcare Services</h2>
+
+            <p>
+                Comprehensive medical services for patients
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚑
+                </div>
+
+                <h3>Emergency Care</h3>
+
+                <p>
+                    Emergency medical assistance and immediate care.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🫀
+                </div>
+
+                <h3>Cardiology</h3>
+
+                <p>
+                    Heart-related consultation and medical care.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧠
+                </div>
+
+                <h3>Neurology</h3>
+
+                <p>
+                    Diagnosis and treatment of neurological conditions.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    👶
+                </div>
+
+                <h3>Pediatrics</h3>
+
+                <p>
+                    Healthcare services for infants and children.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🦴
+                </div>
+
+                <h3>Orthopedics</h3>
+
+                <p>
+                    Treatment and consultation for bones and joints.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🩻
+                </div>
+
+                <h3>Radiology</h3>
+
+                <p>
+                    Medical imaging and diagnostic services.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧪
+                </div>
+
+                <h3>Laboratory</h3>
+
+                <p>
+                    Diagnostic laboratory testing services.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💊
+                </div>
+
+                <h3>Pharmacy</h3>
+
+                <p>
+                    Medicines and pharmaceutical support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="doctors">
+
+        <div class="section-title">
+
+            <h2>Our Doctors</h2>
+
+            <p>
+                Meet our available medical professionals
+            </p>
+
+        </div>
+
+        <div class="doctor-search">
+
+            <input
+                type="text"
+                id="doctorSearch"
+                placeholder="Search doctor or specialization..."
+                onkeyup="searchDoctors()"
+            >
+
+        </div>
+
+
+        <div class="doctor-grid" id="doctorList">
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Raju Kumar
+                </h3>
+
+                <p class="speciality">
+                    General Medicine
+                </p>
+
+                <p>
+                    MBBS, MD
+                </p>
+
+                <p>
+                    Available: 9:00 AM - 1:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👩‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Shreya C
+                </h3>
+
+                <p class="speciality">
+                    Pediatrics
+                </p>
+
+                <p>
+                    MBBS, MD Pediatrics
+                </p>
+
+                <p>
+                    Available: 11:00 AM - 2:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Dr. persona s v
+                </h3>
+
+                <p class="speciality">
+                    Orthopedics
+                </p>
+
+                <p>
+                    MBBS, MS Orthopedics
+                </p>
+
+                <p>
+                    Available: 2:00 PM - 10:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👩‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Meghna 
+                </h3>
+
+                <p class="speciality">
+                    Gynecology
+                </p>
+
+                <p>
+                    MBBS, MS
+                </p>
+
+                <p>
+                    Available: 1:00 AM - 5:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Sangamesh Shettar
+                </h3>
+
+                <p class="speciality">
+                 Cardiology,
+                </p>
+
+                <p>
+                    MBBS, MD, DM, Managing Director AND HOD of Cardiology
+                </p>
+
+                <p>
+                    Available: 10:00 PM - 8:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+
+            <div class="doctor-card">
+
+                <div class="doctor-image">
+                    👩‍⚕️
+                </div>
+
+                <h3>
+                    Dr. Chaitra T
+                </h3>
+
+                <p class="speciality">
+                    Dermatology
+                </p>
+
+                <p>
+                    MBBS, MD Dermatology
+                </p>
+
+                <p>
+                    Available: 11:00 AM - 3:00 PM
+                </p>
+
+                <span class="available">
+                    ● Available Today
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>Medical Departments</h2>
+
+            <p>
+                Explore our major medical specialties
+            </p>
+
+        </div>
+
+        <div class="department-grid">
+
+            <div class="department">
+                <h3>General Medicine</h3>
+                <p>
+                    Diagnosis and treatment of common medical conditions.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Cardiology</h3>
+                <p>
+                    Specialized healthcare for heart-related conditions.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Orthopedics</h3>
+                <p>
+                    Bone, joint and musculoskeletal care.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Pediatrics</h3>
+                <p>
+                    Healthcare services for children.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Gynecology</h3>
+                <p>
+                    Women's health and reproductive healthcare.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Dermatology</h3>
+                <p>
+                    Skin, hair and nail related healthcare.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Neurology</h3>
+                <p>
+                    Diagnosis and treatment of neurological conditions.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Radiology</h3>
+                <p>
+                    Medical imaging and diagnostic services.
+                </p>
+            </div>
+
+            <div class="department">
+                <h3>Emergency Medicine</h3>
+                <p>
+                    Immediate care for urgent medical conditions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="appointment" id="appointment">
+
+        <div class="appointment-container">
+
+            <div class="section-title">
+
+                <h2>Book an Appointment</h2>
+
+                <p>
+                    Submit your appointment request online
+                </p>
+
+            </div>
+
+            <form
+                class="appointment-form"
+                onsubmit="bookAppointment(event)"
+            >
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>
+                            Patient Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="patientName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Enter email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Department
+                        </label>
+
+                        <select required>
+
+                            <option value="">
+                                Select Department
+                            </option>
+
+                            <option>
+                                General Medicine
+                            </option>
+
+                            <option>
+                                Cardiology
+                            </option>
+
+                            <option>
+                                Pediatrics
+                            </option>
+
+                            <option>
+                                Orthopedics
+                            </option>
+
+                            <option>
+                                Gynecology
+                            </option>
+
+                            <option>
+                                Dermatology
+                            </option>
+
+                            <option>
+                                Neurology
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Appointment Date
+                        </label>
+
+                        <input
+                            type="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Preferred Time
+                        </label>
+
+                        <input
+                            type="time"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            placeholder="Describe your concern..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Book Appointment
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact">
+
+        <div class="section-title">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Get in touch with Sangamesh Medical Center
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <div class="contact-card">
+
+                <h3>
+                    Hospital Information
+                </h3>
+
+                <div class="contact-item">
+
+                    📍 <strong>Address</strong>
+
+                    <br>
+
+                    Sangamesh College of Medical and Research Center,
+                     Near Bus StandIlkal, Karnataka, India
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    📞 <strong>Phone</strong>
+
+                    <br>
+
+                    +91 8904631104
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    ✉️ <strong>Email</strong>
+
+                    <br>
+
+                    sangamesh120067@gmail.com
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    🕐 <strong>Working Hours</strong>
+
+                    <br>
+
+                    Monday - Sunday
+
+                    <br>
+
+                    Emergency Services: 24/7
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <h3>
+                    Emergency Information
+                </h3>
+
+                <p>
+                    For medical emergencies, please contact the hospital
+                    emergency department or your local emergency service
+                    immediately.
+                </p>
+
+                <div class="emergency">
+
+                    <strong>
+                        🚨 Emergency Care
+                    </strong>
+
+                    <p>
+                        Emergency services are presented as available
+                        24 hours a day.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h3>
+                    Sangamesh College of Medical and Research Center
+                </h3>
+
+                <p>
+                    Providing healthcare information and services
+                    for the community of Ilkal.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#appointment">Appointment</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Departments
+                </h3>
+
+                <a href="#services">General Medicine</a>
+                <a href="#services">Cardiology</a>
+                <a href="#services">Pediatrics</a>
+                <a href="#services">Orthopedics</a>
+                <a href="#services">Emergency Care</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Sangamesh College of Medical and Research Center,
+            Near Bus Stand Ilkal. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        function searchDoctors() {
+
+            let input =
+                document.getElementById("doctorSearch")
+                .value
+                .toLowerCase();
+
+            let doctors =
+                document.querySelectorAll(".doctor-card");
+
+            doctors.forEach(function(doctor) {
+
+                let text =
+                    doctor.innerText.toLowerCase();
+
+                if (text.includes(input)) {
+
+                    doctor.style.display = "block";
+
+                } else {
+
+                    doctor.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+        function bookAppointment(event) {
+
+            event.preventDefault();
+
+            let name =
+                document.getElementById("patientName").value;
+
+            alert(
+                "Thank you, " +
+                name +
+                "!\n\nYour appointment request has been submitted."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
